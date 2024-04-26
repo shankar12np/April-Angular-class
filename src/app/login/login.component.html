@@ -1,0 +1,23 @@
+
+<div class="container">
+
+  <div class="login-box">
+    <h1 class="header">April-Angular-Class</h1>
+    <h1 style="color: brown; text-align: center;">{{ userName }}</h1>
+    <h2 class="title-red">Sign in</h2>
+    <div class="main-agileinfo">
+      <div class="agileits-top">
+        <p style="margin-bottom: 10px;">Have an Account?</p>
+        <form>
+          <p style="color: red;" *ngIf="userName && userName?.length > 0 ">User Writing Info</p>
+          <input style="margin-bottom: 30;" name="userName" [(ngModel)]="userName" class="text" type="text" placeholder="Username">
+          <input class="text" type="password" [(ngModel)]="password" name="password" placeholder="Password">
+
+          <button type="submit">Login</button>
+          <p style="margin-bottom: 10px;">New Student?</p>
+          <button type="button" (click)="register()">Register</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

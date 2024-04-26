@@ -1,0 +1,48 @@
+.container {
+  margin: 0 auto; /* This centers the container horizontally */
+  padding: 20px;
+  max-width: 600px; /* Optional: Adjust the max-width as needed */
+  height: 100vh;
+
+}
+
+.login-box {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.title-red {
+  color: red;
+}
+
+.text {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
