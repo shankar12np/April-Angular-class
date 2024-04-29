@@ -1,59 +1,64 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-10 col-lg-8">
+      <div class="card border-primary mt-5">
+        <div class="card-body">
+          <h2 class="card-title text-center">Registration Form</h2>
 
- <div class="register-from-box">
-  <h2>Registration From</h2>
-      <!-- <h2 style="margin-bottom: 10px;">Registration From</h2> -->
-    
-      <form>
-        <p *ngIf="tellUs && tellUs.length > 0 " [ngStyle]="{'yellow': 'yellow'}">Its Working!</p>
-        <p *ngIf="tellUs && tellUs.length > 0" [ngClass]="{'rg-yellow': tellUs && tellUs.length > 0}">Form Works</p>
+          <form>
+            <p *ngIf="tellUs && tellUs.length > 0" class="text-warning">Its Working!</p>
+            <p *ngIf="tellUs && tellUs.length > 0" class="rg-yellow">Form Works</p>
 
-        <p style="background-color: rgb(211, 200, 161);">Tell us your about you </p>
-        <input style="margin-bottom: 30;" name="tellUs" [(ngModel)]="tellUs" class="text" type="text" placeholder="Tell us about you">
-        <br>
-       <h3 style="color: brown; text-align: center;"> {{tellUs}}</h3>
-       <input type="text" name="address" [(ngModel)]="address" class="text" type="text" placeholder="Your address">
-       <br>
-       <h3 style="color: brown; text-align: center;"> {{address}}</h3>
+            <p class="bg-warning text-dark">Tell us about you</p>
+            <input name="tellUs" [(ngModel)]="tellUs" class="form-control mb-3" type="text" placeholder="Tell us about you">
+            <h3 class="text-center text-brown">{{ tellUs }}</h3>
 
-       <input style="margin-bottom: 30;" name="intrestedClasses" [(ngModel)]="intrestedClasses" class="text" type="text" placeholder="What are the classes you are intrested ?">
-        <br>
-       <h3 style="color: brown; text-align: center;"> {{intrestedClasses}}</h3>
+            <input name="address" [(ngModel)]="address" class="form-control mb-3" type="text" placeholder="Your address">
+            <h3 class="text-center text-brown">{{ address }}</h3>
 
-       <input type="text" name="contactInfo" [(ngModel)]="contactInfo" class="text" type="text" placeholder="Your Contact Details">
-       <br>
-       <h3 style="color: brown; text-align: center;"> {{contactInfo}}</h3>
-</form>
- </div>
- <br>
+            <input name="interestedClasses" [(ngModel)]="intrestedClasses" class="form-control mb-3" type="text" placeholder="What are the classes you are interested in?">
+            <h3 class="text-center text-brown">{{ intrestedClasses }}</h3>
 
- <div class="user-list">
-  <h2 class="user-list__heading" style="text-align: center;">Registered Users</h2>
-  <div class="table-wrapper">
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Country</th>
-        <th>Job</th>
-        <th>Company</th>
-        <th>ID</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let user of users">
-        <td>{{ user.userName }}</td>
-        <td>{{ user.email }}</td>
-        <td>{{ user.country }}</td>
-        <td>{{ user.job }}</td>
-        <td>{{ user.companyName }}</td>
-        <td>{{ user.id }}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-</div>
+            <input name="contactInfo" [(ngModel)]="contactInfo" class="form-control mb-3" type="text" placeholder="Your Contact Details">
+            <h3 class="text-center text-brown">{{ contactInfo }}</h3>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <div class="row justify-content-center mt-5">
+    <div class="col-12 col-md-10 col-lg-8">
+      <div class="card border-primary">
+        <div class="card-body">
+          <h2 class="card-title text-center">Registered Users</h2>
 
-
-
+          <div class="table-responsive">
+            <table class="table">
+              <thead class="thead-light">
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Country</th>
+                  <th>Job</th>
+                  <th>Company</th>
+                  <th>ID</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                <tr *ngFor="let user of users">
+                  <td>{{ user.userName }}</td>
+                  <td>{{ user.email }}</td>
+                  <td>{{ user.country }}</td>
+                  <td>{{ user.job }}</td>
+                  <td>{{ user.companyName }}</td>
+                  <td>{{ user.id }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
