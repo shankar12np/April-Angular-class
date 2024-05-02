@@ -1,17 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
 })
-export class SidebarComponent {
+export class SidebarComponent implements OnInit{
 
-  menuItems: string[] = ['Home', 'About', 'Services', 'Contact'];
-  selectedItem: string = ''; 
+@Input() dataFromParrent: any;
+@Input() message!: string;
+@Output() childEvent = new EventEmitter();
 
-  selectMenuItem(item: string): void {
-    this.selectedItem = item; 
-  }
+data="Shankar";
+  
+ngOnInit(): void {
+this.childEvent.emit(this.data)
+this.childEvent.emit(this.dataFromParrent)
+
+}
+
+sendMessage() {
+  this.childEvent.emit("Message after click from event");
+}
 
 }

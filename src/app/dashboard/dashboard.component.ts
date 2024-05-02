@@ -7,8 +7,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
-
+  
   constructor(private router: Router) { }
+
+  parentMessage: any ='';
+ dataForChild: any ='' ;
+
+  handleChildEvent(name: any){
+    this.dataForChild = name
+  
+
+  }
+
 
   students = [
     {
